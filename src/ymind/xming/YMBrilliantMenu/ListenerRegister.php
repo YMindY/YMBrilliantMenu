@@ -1,4 +1,5 @@
 <?php
+/* 注册监听器 */
 namespace ymind\xming\YMBrilliantMenu;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
@@ -8,6 +9,7 @@ abstract class ListenerRegister extends PluginBase
   protected static $namelist = 
   [
     MenuEntry\EntryGiver::class,
+    Func\Home\Sender::class,
   ];
   protected static $listeners = [];
   protected function assignInstance()

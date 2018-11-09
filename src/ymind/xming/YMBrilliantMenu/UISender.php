@@ -1,8 +1,9 @@
 <?php
+/* 顾名思义，发ui的 */
 namespace ymind\xming\YMBrilliantMenu;
 use pocketmine\network\mcpe\protocol\ModalFormRequestPacket;
 use pocketmine\Player;
-abstract class UISender extends
+abstract class UISender
 {
   public static function send(int $formid,array $formdata,Player $player)
   {

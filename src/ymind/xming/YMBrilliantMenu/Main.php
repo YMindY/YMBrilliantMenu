@@ -1,4 +1,5 @@
 <?php
+/* 主要负责执行父类的任务 */
 namespace ymind\xming\YMBrilliantMenu;
 class Main extends ListenerRegister
 {
