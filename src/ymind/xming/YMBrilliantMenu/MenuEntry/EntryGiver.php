@@ -22,11 +22,11 @@ class EntryGiver implements \pocketmine\event\Listener
     $cnt = 0;
     foreach($player->getInventory()->getContents() as $item)
     {
-			   	if($item->getID() == $this->entryitem->getId() && $item->getDamage() == $this->entryitem->getDamage())
+      if($item->getID() == $this->entryitem->getId() && $item->getDamage() == $this->entryitem->getDamage())
       {
         $cnt += $item->getCount();
-			   	}
- 			}
+      }
+    }
     if($cnt <= 0)
     {
       $player->getInventory()->addItem(clone $this->entryitem);
