@@ -1,4 +1,5 @@
 <?php
+/* 点地发送主菜单ui */
 namespace ymind\xming\YMBrilliantMenu\Func\Home;
 class Sender implements \pocketmine\event\Listener
 {

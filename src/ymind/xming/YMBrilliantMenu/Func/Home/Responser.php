@@ -1,4 +1,5 @@
 <?php
+/* 主菜单提交响应 */
 namespace ymind\xming\YMBrilliantMenu\Func\Home;
 use ymind\xming\YMBrilliantMenu\Func\ID;
 use ymind\xming\YMBrilliantMenu\BaseResponser;

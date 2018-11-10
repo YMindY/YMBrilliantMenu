@@ -1,4 +1,5 @@
 <?php
+/* 主菜单ui */
 namespace ymind\xming\YMBrilliantMenu\Func\Home;
 use ymind\xming\YMBrilliantMenu\BaseUI;
 use ymind\xming\YMBrilliantMenu\Func\ID;
