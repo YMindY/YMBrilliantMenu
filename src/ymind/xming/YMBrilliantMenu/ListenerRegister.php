@@ -10,12 +10,9 @@ abstract class ListenerRegister extends PluginBase
   [
     MenuEntry\EntryGiver::class,
     Func\Home\Sender::class,
+    Func\Home\Responser::class,
   ];
   protected static $listeners = [];
-  protected function assignInstance()
-  {
-    self::$instance=$this;
-  }
   final protected static function register(Listener $listener):void
   {
     self::$instance->getServer()->getPluginManager()->registerEvents($listener,self::$instance);
@@ -30,6 +27,10 @@ abstract class ListenerRegister extends PluginBase
   public static function getListener(string $name):Listener
   {
     return self::$listeners[$name];
+  }
+  protected function assignInstance()
+  {
+    self::$instance=$this;
   }
 }
 ?>

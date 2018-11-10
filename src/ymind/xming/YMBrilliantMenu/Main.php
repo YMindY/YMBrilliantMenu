@@ -17,5 +17,9 @@ class Main extends ListenerRegister
   {
     $this->getLogger()->warning("is Stopped!");
   }
+  public static function getInstance()
+  {
+    return self::$instance;
+  }
 }
 ?>

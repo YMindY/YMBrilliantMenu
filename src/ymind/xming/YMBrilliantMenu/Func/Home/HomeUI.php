@@ -2,8 +2,11 @@
 namespace ymind\xming\YMBrilliantMenu\Func\Home;
 use ymind\xming\YMBrilliantMenu\BaseUI;
 use ymind\xming\YMBrilliantMenu\Func\ID;
-class Home extends BaseUI
+class HomeUI extends BaseUI
 {
+  const INDEX_TP = 0;
+  const INDEX_SIGN = 1;
+  const INDEX_SHOP = 2;
   protected static $id = ID::HOME;
   protected static $data = 
   [
