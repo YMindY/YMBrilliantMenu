@@ -6,6 +6,7 @@ abstract class BaseUI
 {
   protected static $id;
   protected static $data;
-  abstract public static function send(Player $player):void;
+  protected static $last;
+  abstract public static function send(array $args):void;
 }
 ?>

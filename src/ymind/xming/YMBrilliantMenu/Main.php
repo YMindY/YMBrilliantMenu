@@ -11,6 +11,7 @@ class Main extends ListenerRegister
   public function onEnable():void
   {
     self::registerListeners();
+    @mkdir($this->getDataFolder());
     $this->getLogger()->notice("is Enabled! --by xMing");
   }
   public function onDisable():void

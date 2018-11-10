@@ -15,6 +15,7 @@ class Responser extends BaseResponser
       break;
       case HomeUI::INDEX_SIGN:
         $player->sendMessage("签到功能");
+        \ymind\xming\YMBrilliantMenu\Func\Sign\SignUI::send([$player,"尚未","233"]);
       break;
       case HomeUI::INDEX_SHOP:
         $player->sendMessage("商店功能");

@@ -22,9 +22,9 @@ class HomeUI extends BaseUI
     ]
   ];
   
-  public static function send(\pocketmine\Player $player):void
+  public static function send(array $args):void
   {
-    \ymind\xming\YMBrilliantMenu\UISender::send(self::$id,self::$data,$player);
+    \ymind\xming\YMBrilliantMenu\UISender::send(self::$id,self::$data,$args[0]);
   }
 }
 ?>

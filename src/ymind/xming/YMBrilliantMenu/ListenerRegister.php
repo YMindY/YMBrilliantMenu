@@ -11,6 +11,7 @@ abstract class ListenerRegister extends PluginBase
     MenuEntry\EntryGiver::class,
     Func\Home\Sender::class,
     Func\Home\Responser::class,
+    Func\Sign\SignData::class,
   ];
   protected static $listeners = [];
   final protected static function register(Listener $listener):void

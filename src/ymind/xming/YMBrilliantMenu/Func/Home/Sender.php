@@ -7,7 +7,7 @@ class Sender implements \pocketmine\event\Listener
   {
     if(\ymind\xming\YMBrilliantMenu\MenuEntry\EntryGiver::isEntry($event->getItem()))
     {
-      HomeUI::send($event->getPlayer());
+      HomeUI::send([$event->getPlayer()]);
     }
   }
 }
