@@ -5,17 +5,23 @@ use ymind\xming\YMBrilliantMenu\Func\ID;
 use ymind\xming\YMBrilliantMenu\BaseResponser;
 class Responser extends BaseResponser
 {
-  protected function response(int $id,string $data,\pocketmine\Player $player):void
+  protected function response(int $id,string $index,\pocketmine\Player $player):void
   {
     if($id != ID::HOME) return;
-    switch($data)
+    switch($index)
     {
       case HomeUI::INDEX_TP:
         $player->sendMessage("传送功能");
       break;
       case HomeUI::INDEX_SIGN:
+        $signdata = \ymind\xming\YMBrilliantMenu\Func\Sign\SignData::getPlayerData($player->getName());
         $player->sendMessage("签到功能");
-        \ymind\xming\YMBrilliantMenu\Func\Sign\SignUI::send([$player,"尚未","233"]);
+        \ymind\xming\YMBrilliantMenu\Func\Sign\SignUI::send(
+        [
+        $player,
+        $signdata["签到状态"] ?? "尚未",
+        $signdata["连签天数"] ?? "0"
+        ]);
       break;
       case HomeUI::INDEX_SHOP:
         $player->sendMessage("商店功能");

@@ -1,7 +1,7 @@
 <?php
 namespace ymind\xming\YMBrilliantMenu\Element;
 use ymind\xming\YMBrilliantMenu\Func\ID;
-class textUI
+class TextUI
 {
   const INDEX_BACK = 0;
   protected static $id = ID::TEXT;
@@ -15,7 +15,7 @@ class textUI
       ['text'=>'确定'],
     ]
   ];
-  protected $last;
+  public $last;
   public function __construct(string $content,string $last){
     $this->data['content'] = $content;
     $this->last = $last;
