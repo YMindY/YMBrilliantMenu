@@ -12,6 +12,7 @@ abstract class ListenerRegister extends PluginBase
     Func\Home\Sender::class,
     Func\Home\Responser::class,
     Func\Sign\SignData::class,
+    Element\TextResponser::class,
   ];
   protected static $listeners = [];
   final protected static function register(Listener $listener):void

@@ -12,7 +12,7 @@ class SignData extends BaseResponser
     if($id != ID::SIGN) return;
     if($data == SignUI::INDEX_SIGN)
     {
-      $player->sendMessage("签到成功!");
+      (new \ymind\xming\YMBrilliantMenu\Element\TextUI("签到成功","\ymind\xming\YMBrilliantMenu\Func\Sign\SignUI"))->send($player);
     }
     if($data == SignUI::INDEX_BACK)
     {

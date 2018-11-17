@@ -22,7 +22,8 @@ class SignUI extends BaseUI
   public static $last = \ymind\xming\YMBrilliantMenu\Func\Home\HomeUI::class;
   public static function send(array $args):void
   {
-    self::$data['content'] = str_replace(["&status","&num"],[$args[1],$args[2]],self::$data['content']);
+    $data = self::$data;
+    $data['content'] = str_replace(["&status","&num"],[$args[1],$args[2]],$data['content']);
     \ymind\xming\YMBrilliantMenu\UISender::send(self::$id,self::$data,$args[0]);
   }
 }

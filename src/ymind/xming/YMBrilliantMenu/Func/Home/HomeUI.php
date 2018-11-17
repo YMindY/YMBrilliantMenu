@@ -12,7 +12,7 @@ class HomeUI extends BaseUI
   protected static $data = 
   [
     'type'=>'form',
-    'title'=>'§a超§b级§c菜§e单§r',
+    'title'=>'§l超级菜单§r',
     'content'=>'主菜单',
     'buttons'=>
     [
@@ -21,7 +21,6 @@ class HomeUI extends BaseUI
       ['text'=>'商店·功能']
     ]
   ];
-  
   public static function send(array $args):void
   {
     \ymind\xming\YMBrilliantMenu\UISender::send(self::$id,self::$data,$args[0]);
