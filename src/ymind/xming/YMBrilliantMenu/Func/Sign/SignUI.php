@@ -12,7 +12,7 @@ class SignUI extends BaseUI
   [
     'type'=>'form',
     'title'=>'签到·功能',
-    'content'=>"你今天&status签到\n你已经连续签到&num天了",//&status(尚未|已经)
+    'content'=>"你今天&status签到\n你已经累计签到&num天了",//&status(尚未|已经)
     'buttons'=>
     [
       ['text'=>'签到'],

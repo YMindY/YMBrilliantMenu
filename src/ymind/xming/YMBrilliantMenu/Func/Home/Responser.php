@@ -22,14 +22,14 @@ class Responser extends BaseResponser
         [
         $player,
         (SignData::isSigned($name) ? "已经" : "尚未"),
-        $signdata["连签天数"] ?? "0"
+        $signdata["累签天数"] ?? "0"
         ]);
       break;
       case HomeUI::INDEX_SHOP:
         $player->sendMessage("商店功能");
       break;
       default:
-        $player->sendMessage("数据错误!");
+        $player->sendMessage("数据错误!，请通知服主联系开发者!");
     }
   }
 }
