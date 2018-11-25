@@ -18,11 +18,18 @@ class SignData extends BaseResponser
     $name = $player->getName();
     if($data == SignUI::INDEX_SIGN)
     {
-      $player->sendMessage("签到成功!");
       $data = self::getPlayerData($name);
-      $data["签到状态"] = "已经";
-      $data["连签天数"] = isset($data["连签天数"]) ? $data["连签天数"]+1 : 1;
-      self::setPlayerData($name,$data);
+      $date = date("y-m-d");
+      if($this->isSigned($name)){
+        $player->sendMessage("你今天已经签到过了!");
+      }
+      else
+      {
+        $data["最近签到"] = date("y-m-d");
+        $data["连签天数"] = isset($data["连签天数"]) ? $data["连签天数"]+1 : 1;
+      //$data["签到状态"] = "已经";
+        self::setPlayerData($name,$data);
+      }
     }
     if($data == SignUI::INDEX_BACK)
     {
@@ -32,6 +39,11 @@ class SignData extends BaseResponser
   protected static function getDataFolder():string
   {
     return \ymind\xming\YMBrilliantMenu\Main::getInstance()->getDataFolder()."Sign/";
+  }
+  public static function isSigned(string $name):bool
+  {
+    $data = self::getPlayerData($name);
+    return (isset($data["最近签到"]) && strtotime($data["最近签到"])==strtotime(date("y-m-d")));
   }
   public static function getPlayerData(string $playername):array
   {
